@@ -6,8 +6,8 @@
 class Segment {
 
 //Add x and y member variables. They will hold the corner location of each segment of the snake.
-
-
+int x;
+int y;
 // Add a constructor with parameters to initialize each variable.
 
 
@@ -20,8 +20,8 @@ class Segment {
 // All the game variables that will be shared by the game methods are here
 //*
 
-
-
+int foodX;
+int foodY;
 
 
 //*
