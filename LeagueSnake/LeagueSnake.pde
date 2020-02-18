@@ -27,10 +27,11 @@ int foodX;
 int foodY;
 int direction = UP;
 int numOfFood = 0; 
-
+Segment[] a = new Segment[];
 
 //*
 // ***** SETUP METHODS *****
+
 // These methods are called at the start of the game.
 //*
 
@@ -59,6 +60,7 @@ void draw() {
   drawFood();
   move();
   drawSnake();
+  eat();
 }
 
 void drawFood() {
@@ -162,5 +164,8 @@ void checkBoundaries() {
 
 void eat() {
   //When the snake eats the food, its tail should grow and more food appear
-
+if(head.x == foodX && head.y == foodY){
+  numOfFood++;
+  dropFood();
+}
 }
